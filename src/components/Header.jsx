@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Wind, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
+import logoBiocomfort from '../assets/logo-biocomfort.png';
 
 const links = [
   { href: '#servicios', label: 'Servicios' },
@@ -18,11 +19,11 @@ export default function Header() {
     <header className="header">
       <div className="container header__inner">
         <a className="brand" href="#inicio" aria-label="BIOCOMFORT, inicio" onClick={closeMenu}>
-          <span className="brand__mark"><Wind size={24} aria-hidden="true" /></span>
-          <span className="brand__text">
-            <span className="brand__name">BIOCOMFORT</span>
-            <span className="brand__tagline">Climatización y confort</span>
-          </span>
+          <img
+              className="brand__logo"
+              src={logoBiocomfort}
+              alt="BIOCOMFORT - Soluciones climáticas"
+          />
         </a>
 
         <button

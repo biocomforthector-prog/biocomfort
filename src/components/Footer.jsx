@@ -1,4 +1,4 @@
-import { Wind } from 'lucide-react';
+import logoBiocomfort from '../assets/logo-biocomfort.png';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -7,11 +7,11 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <a className="brand" href="#inicio" aria-label="BIOCOMFORT, volver al inicio">
-          <span className="brand__mark"><Wind size={22} aria-hidden="true" /></span>
-          <span className="brand__text">
-            <span className="brand__name">BIOCOMFORT</span>
-            <span className="brand__tagline">Climatización y confort</span>
-          </span>
+          <img
+            className="footer__logo"
+            src={logoBiocomfort}
+            alt="BIOCOMFORT - Soluciones climáticas"
+          />
         </a>
         <p className="footer__copy">© {year} BIOCOMFORT. Todos los derechos reservados.</p>
         <nav className="footer__links" aria-label="Enlaces del pie de página">
