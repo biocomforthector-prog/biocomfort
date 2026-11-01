@@ -70,6 +70,374 @@ h2 { margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.04
 .service-card:nth-child(3) .service-card__icon { color: #7158b8; background: #f0edfb; }
 .service-card h3 { margin: 0 0 .7rem; font-size: 1.18rem; }
 .service-card p { margin: 0; color: var(--muted); line-height: 1.7; }
+
+
+/* ========================================
+   SECCIÓN DE PROYECTOS - BIOCOMFORT
+======================================== */
+
+.projects {
+  padding: 100px 0;
+  background: #071521;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.projects__header {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.projects__header .section-label {
+  color: #35c879;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.projects__header h2 {
+  margin: 15px 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.projects__header p {
+  color: #b8c7d1;
+  line-height: 1.7;
+}
+
+.projects__carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.projects__slide {
+  width: min(100%, 850px);
+  overflow: hidden;
+  background: #102536;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.projects__image {
+  width: 100%;
+  height: 450px;
+  background: #193448;
+}
+
+.projects__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.projects__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b8c7d1;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #102536, #1b4960);
+}
+
+.projects__info {
+  padding: 25px 30px;
+}
+
+.projects__info span {
+  color: #35c879;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.projects__info h3 {
+  margin: 10px 0 0;
+  font-size: 1.5rem;
+}
+
+.projects__arrow {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #087fca;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.projects__arrow:hover {
+  background: #35c879;
+  transform: scale(1.08);
+}
+
+.projects__arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+.projects__indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.projects__indicator {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #607687;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.projects__indicator.active {
+  width: 28px;
+  border-radius: 10px;
+  background: #35c879;
+}
+
+
+/* Corrección de contraste en la sección de proyectos */
+
+.projects {
+  color: #ffffff;
+}
+
+.projects__header h2,
+.projects__info h3 {
+  color: #ffffff;
+}
+
+.projects__header p {
+  color: #d5e2eb;
+}
+
+.projects__header .section-label,
+.projects__info span {
+  color: #48e08b;
+}
+
+.projects__placeholder {
+  color: #ffffff;
+}
+
+
+
+/* ========================================
+   PRESENTACIÓN DE BIOCOMFORT
+======================================== */
+
+.video-presentation {
+  padding: 100px 0;
+  background: #f3f7fa;
+  color: #102536;
+}
+
+.video-presentation__header {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.video-presentation__header .section-label {
+  color: #087fca;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.video-presentation__header h2 {
+  margin: 15px 0;
+  color: #102536;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.video-presentation__header p {
+  color: #526575;
+  line-height: 1.8;
+}
+
+.video-presentation__container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.video-presentation__placeholder {
+  min-height: 430px;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #071521, #123d59);
+  border: 1px solid rgba(8, 127, 202, 0.3);
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(7, 21, 33, 0.15);
+}
+
+.video-presentation__icon {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  color: #48e08b;
+  background: rgba(72, 224, 139, 0.12);
+  border-radius: 50%;
+}
+
+.video-presentation__play {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #087fca;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.video-presentation__placeholder h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+.video-presentation__placeholder p {
+  max-width: 520px;
+  margin: 0;
+  color: #d5e2eb;
+  line-height: 1.7;
+}
+
+.video-presentation__badge {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 9px 18px;
+  color: #48e08b;
+  background: rgba(72, 224, 139, 0.12);
+  border: 1px solid rgba(72, 224, 139, 0.35);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   REDES SOCIALES - BIOCOMFORT
+======================================== */
+
+.social-media {
+  padding: 90px 0;
+  background: #071521;
+  color: #ffffff;
+}
+
+.social-media__header {
+  max-width: 700px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.social-media__header .section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #48e08b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.social-media__header h2 {
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.social-media__header p {
+  color: #d5e2eb;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.social-media__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.social-media__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-height: 155px;
+  padding: 25px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media__card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-media__facebook {
+  background: #1877f2;
+}
+
+.social-media__instagram {
+  background: linear-gradient(135deg, #833ab4, #c13584, #f77737);
+}
+
+.social-media__tiktok {
+  background: #202020;
+}
+
+.social-media__youtube {
+  background: #d71920;
+}
+
+.social-media__whatsapp {
+  background: #168b52;
+}
+
+
+
 .about__grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 4rem; }
 .about-visual { position: relative; display: grid; min-height: 340px; place-items: center; overflow: hidden; background: linear-gradient(145deg, #e6f5ee, #e4f1fb); border-radius: 24px; }
 .about-visual__circle { position: absolute; width: 260px; aspect-ratio: 1; border: 1px solid #1261a025; border-radius: 50%; box-shadow: 0 0 0 35px #1261a009, 0 0 0 70px #1261a008; }
@@ -148,4 +516,98 @@ h2 { margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.04
   .form-field--full { grid-column: auto; }
   .contact-form { padding: 1.2rem; }
   .footer__links { flex-wrap: wrap; }
+}
+
+/* Adaptación para dispositivos móviles */
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 70px 0;
+  }
+
+  .projects__carousel {
+    gap: 8px;
+  }
+
+  .projects__image {
+    height: 260px;
+  }
+
+  .projects__arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .projects__info {
+    padding: 20px;
+  }
+
+  .projects__info h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Adaptación para móviles */
+
+@media (max-width: 600px) {
+  .video-presentation {
+    padding: 70px 0;
+  }
+
+  .video-presentation__placeholder {
+    min-height: 350px;
+    padding: 35px 20px;
+    border-radius: 16px;
+  }
+
+  .video-presentation__play {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* Adaptación para tabletas */
+@media (max-width: 768px) {
+  .social-media {
+    padding: 70px 0;
+  }
+
+  .social-media__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .social-media__card {
+    min-height: 135px;
+  }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 480px) {
+  .social-media {
+    padding: 55px 0;
+  }
+
+  .social-media__header {
+    margin-bottom: 30px;
+  }
+
+  .social-media__header p {
+    font-size: 0.95rem;
+  }
+
+  .social-media__grid {
+    gap: 12px;
+  }
+
+  .social-media__card {
+    min-height: 120px;
+    padding: 18px 10px;
+    font-size: 0.95rem;
+  }
+
+  .social-media__card svg {
+    width: 27px;
+    height: 27px;
+  }
 }
