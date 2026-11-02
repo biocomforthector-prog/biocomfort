@@ -477,6 +477,51 @@ h2 { margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.04
 .footer__copy { margin: 0; font-size: .83rem; }
 .footer__links { display: flex; gap: 1rem; }
 .footer__links a { color: #d8e1e9; font-size: .85rem; text-decoration: none; }
+
+/* ========================================
+   REDES SOCIALES DEL FOOTER
+======================================== */
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer__social a:hover {
+  color: #071521;
+  background: #48e08b;
+  border-color: #48e08b;
+  transform: translateY(-4px);
+}
+
+.footer__social a:focus-visible {
+  outline: 2px solid #48e08b;
+  outline-offset: 4px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+  .footer__social {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
 .footer__links a:hover { color: #74d7a6; }
 @media (max-width: 900px) {
   .hero__grid { gap: 2rem; }

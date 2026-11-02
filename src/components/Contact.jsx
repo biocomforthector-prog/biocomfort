@@ -5,7 +5,10 @@ const initialForm = {
   nombre: '',
   correo: '',
   telefono: '',
+  ciudad: '',
+  direccion: '',
   servicio: 'Instalación',
+  equipo: 'Minisplit',
   mensaje: '',
 };
 
@@ -61,10 +64,65 @@ export default function Contact() {
               <label htmlFor="correo">Correo electrónico *</label>
               <input id="correo" name="correo" type="email" autoComplete="email" value={form.correo} onChange={handleChange} required placeholder="tu@correo.com" />
             </div>
+            
             <div className="form-field">
-              <label htmlFor="telefono">Teléfono</label>
-              <input id="telefono" name="telefono" type="tel" autoComplete="tel" value={form.telefono} onChange={handleChange} placeholder="Tu número de contacto" />
+              <label htmlFor="telefono">Teléfono / WhatsApp *</label>
+              <input
+                id="telefono"
+                name="telefono"
+                type="tel"
+                autoComplete="tel"
+                value={form.telefono}
+                onChange={handleChange}
+                required
+                minLength={7}
+                maxLength={15}
+                pattern="[0-9+() -]{7,15}"
+                title="Ingresa un número de teléfono válido."
+                placeholder="Ej. +57 300 123 4567"
+              />
             </div>
+
+            <div className="form-field">
+              <label htmlFor="ciudad">Ciudad *</label>
+              <input
+                id="ciudad"
+                name="ciudad"
+                value={form.ciudad}
+                onChange={handleChange}
+                required
+                placeholder="Ej. Bogotá"
+              />
+            </div>
+
+            <div className="form-field">
+              <label htmlFor="direccion">Dirección del servicio *</label>
+              <input
+                id="direccion"
+                name="direccion"
+                value={form.direccion}
+                onChange={handleChange}
+                required
+                placeholder="Dirección donde se realizará el servicio"
+              />
+            </div>
+
+            <div className="form-field">
+              <label htmlFor="equipo">Tipo de equipo *</label>
+              <select
+                id="equipo"
+                name="equipo"
+                value={form.equipo}
+                onChange={handleChange}
+                required
+              >
+                <option>Minisplit</option>
+                <option>Aire acondicionado central</option>
+                <option>Aire acondicionado comercial</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
             <div className="form-field">
               <label htmlFor="servicio">Servicio que necesitas *</label>
               <select id="servicio" name="servicio" value={form.servicio} onChange={handleChange} required>
@@ -74,10 +132,25 @@ export default function Contact() {
                 <option>Asesoría</option>
               </select>
             </div>
+            
             <div className="form-field form-field--full">
-              <label htmlFor="mensaje">Cuéntanos más *</label>
-              <textarea id="mensaje" name="mensaje" value={form.mensaje} onChange={handleChange} required placeholder="Describe brevemente lo que necesitas..." />
-            </div>
+  <label htmlFor="mensaje">Cuéntanos más *</label>
+  <textarea
+    id="mensaje"
+    name="mensaje"
+    value={form.mensaje}
+    required
+    minLength={10}
+    maxLength={1000}
+    rows={5}
+    onChange={handleChange}
+    placeholder="Describe el problema, las características del equipo o el servicio que necesitas..."
+  />
+  <small className="form-note">
+    Mínimo 10 caracteres y máximo 1000.
+  </small>
+</div>
+
           </div>
           <button className="button button--primary" type="submit">Enviar solicitud <Send size={17} aria-hidden="true" /></button>
           {submitted && (
